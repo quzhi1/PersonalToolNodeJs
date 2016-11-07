@@ -1,5 +1,12 @@
 extends layout
 
 block content
-    h1= title
-    p Welcome to #{title}
+    h1 屈直个人工具
+    br
+    button(onclick="move('/auto-poet')") 自动吟诗器
+    br
+    br
+    p 后端支持:
+    a(href='mailto:quzhi65222714@gmail.com?Subject=屈直个人工具%20Support%20Request', target='_blank') 屈直
+    script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
+    script(src="/javascripts/openWindow.js")
