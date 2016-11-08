@@ -17,7 +17,7 @@ function extractAuthor(html) {
 }
 
 function createBody(html) {
-    var pattern = /class="suijineirong">(.*)<\/div>\s*<div\s*class="seeall">/g;
+    var pattern = /class="suijineirong">(.*)\s*<\/div>\s*<div\s*class="seeall">/g;
     var match = pattern.exec(html);
     if (match == null || match[1] == null) {
         console.log("Failed to extract body");
