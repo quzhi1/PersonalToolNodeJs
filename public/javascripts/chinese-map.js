@@ -9,6 +9,7 @@ mapImg.attr('src', '/resources/map1/-2100.jpg');
 mapImg.attr('data-magnify-src', '/resources/map1/-2100.jpg');
 
 $(document).ready(function () {
+    // Load map and magnifier
     $('#map')
         .wrap('<span style="display:inline-block"></span>')
         .css('display', 'block')
@@ -17,24 +18,27 @@ $(document).ready(function () {
             on: 'click',
             magnify: 2
         });
-});
 
-// Slide bar
-$(function () {
-    var slideBar = $('#slider-bar');
-    slideBar.slider({
-        range: "max",
-        min: -2100,
-        max: 2030,
-        value: -2100,
-        step: 0.5,
-        change: function (event, ui) {
-            updateMap();
-        },
-        slide: function (event, ui) {
-            updateMap();
-        }
+    // Slide bar
+    $(function () {
+        var slideBar = $('#slider-bar');
+        slideBar.slider({
+            range: "max",
+            min: -2100,
+            max: 2030,
+            value: -2100,
+            step: 0.5,
+            change: function (event, ui) {
+                updateMap();
+            },
+            slide: function (event, ui) {
+                updateMap();
+            }
+        });
     });
+
+    // Label
+    $("#amount").text('公元：-2100 (点击图片放大观看)');
 });
 
 function updateMap() {
@@ -67,7 +71,7 @@ function updateMap() {
     var graphFile = '/resources/map1/' + graphName + '.jpg';
     mapImg.attr('src', graphFile);
     // console.log('Rendering ' + graphFile)
-    $("#amount").text('公元：' + graphName);
+    $("#amount").text('公元：' + graphName + ' (点击图片放大观看)');
 
     // Update magnifier
     $('#map').on('load', function () {
