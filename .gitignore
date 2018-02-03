@@ -2,4 +2,3 @@
 node_modules/
 *.iml
 public/resources/*
-public/javascripts/jquery*
