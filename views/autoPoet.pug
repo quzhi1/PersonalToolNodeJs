@@ -11,6 +11,7 @@ block content
     br
     a(href='javascript:location.reload(true)') 再吟一首
 
+    script(src='javascripts/parseHtml.js')
     script(type='text/javascript').
         var raw = $('#raw').text();
         $('#title').text(extractTitle(raw));

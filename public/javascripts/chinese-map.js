@@ -3,10 +3,13 @@ var yearsJson = $('#yearsJson').text();
 var years = JSON.parse(yearsJson);
 // console.log(years)
 
+// parent folder
+var parentFolder = "map1_resized";
+
 // Initialize
 var mapImg = $('#map');
-mapImg.attr('src', '/resources/map1/-2100.jpg');
-mapImg.attr('data-magnify-src', '/resources/map1/-2100.jpg');
+mapImg.attr('src', '/resources/' + parentFolder + '/-2100.jpg');
+mapImg.attr('data-magnify-src', '/resources/' + parentFolder + '/-2100.jpg');
 
 $(document).ready(function () {
     // Load map and magnifier
@@ -68,7 +71,7 @@ function updateMap() {
 
     // Chose graph
     var graphName = resultArray[0]; // TODO: Determine real graph
-    var graphFile = '/resources/map1/' + graphName + '.jpg';
+    var graphFile = '/resources/' + parentFolder + '/' + graphName + '.jpg';
     mapImg.attr('src', graphFile);
     // console.log('Rendering ' + graphFile)
     $("#amount").text('公元：' + graphName + ' (点击图片放大观看)');
