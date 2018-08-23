@@ -4,7 +4,8 @@ var years = JSON.parse(yearsJson);
 // console.log(years)
 
 // parent folder
-var parentFolder = "map1_resized";
+// var parentFolder = "map1_resized";
+var parentFolder = "map1";
 
 // Initialize
 var mapImg = $('#map');
@@ -71,7 +72,7 @@ function updateMap() {
 
     // Chose graph
     var graphName = resultArray[0]; // TODO: Determine real graph
-    var graphFile = '/resources/' + parentFolder + '/' + graphName + '.jpg';
+    var graphFile = '/resources/' + parentFolder + '/' + graphName + '.jpg'; // TODO: Use flickr
     mapImg.attr('src', graphFile);
     // console.log('Rendering ' + graphFile)
     $("#amount").text('公元：' + graphName + ' (点击图片放大观看)');
