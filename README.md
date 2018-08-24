@@ -7,8 +7,8 @@ This is a personal Node Js server for miscellaneous tools
 * Interactive Asian Map (亚洲互动地图)
 
 ## Environment
-* Stage: https://stark-plateau-91914.herokuapp.com/
-* Prod: https://sleepy-peak-88028.herokuapp.com/
+* Stage: https://hidden-oasis-68023.herokuapp.com/
+* Prod: https://asia-interactive-map.herokuapp.com
 
 # Dev setup
 1. Install Heroku
