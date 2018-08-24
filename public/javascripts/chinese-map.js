@@ -1,16 +1,13 @@
-// Read years
-var yearsJson = $('#yearsJson').text();
-var years = JSON.parse(yearsJson);
-// console.log(years)
-
-// parent folder
-// var parentFolder = "map1_resized";
-var parentFolder = "map1";
+// Read imageLookupTableJson
+var imageLookupTableJson = $('#imageLookupTableJson').text();
+var imageLookupTable = JSON.parse(imageLookupTableJson);
+var years = Object.keys(imageLookupTable);
 
 // Initialize
 var mapImg = $('#map');
-mapImg.attr('src', '/resources/' + parentFolder + '/-2100.jpg');
-mapImg.attr('data-magnify-src', '/resources/' + parentFolder + '/-2100.jpg');
+mapImg.attr('src', imageLookupTable['-2100']);
+mapImg.attr('data-magnify-src', imageLookupTable['-2100']);
+console.log('Outputting: ' + imageLookupTable['-2100']);
 
 $(document).ready(function () {
     // Load map and magnifier
@@ -72,7 +69,7 @@ function updateMap() {
 
     // Chose graph
     var graphName = resultArray[0]; // TODO: Determine real graph
-    var graphFile = '/resources/' + parentFolder + '/' + graphName + '.jpg'; // TODO: Use flickr
+    var graphFile = imageLookupTable[graphName];
     mapImg.attr('src', graphFile);
     // console.log('Rendering ' + graphFile)
     $("#amount").text('公元：' + graphName + ' (点击图片放大观看)');

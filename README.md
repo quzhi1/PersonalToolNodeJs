@@ -8,5 +8,6 @@ Prod env: https://sleepy-peak-88028.herokuapp.com/
 Tools list:
 
 * Random Poet Tool (自动吟诗器)
+* Interactive Asian Map (亚洲互动地图)
 
 (Feel free to submit a pull request)
